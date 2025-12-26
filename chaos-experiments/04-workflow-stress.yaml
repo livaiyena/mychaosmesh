@@ -13,7 +13,7 @@ spec:
         - network-delay
     - name: stress-cpu
       templateType: StressChaos
-      deadline: "30s"
+      deadline: "5s"
       stressChaos:
         mode: one
         selector:
@@ -27,7 +27,7 @@ spec:
             load: 80
     - name: network-delay
       templateType: NetworkChaos
-      deadline: "30s"
+      deadline: "10s"
       networkChaos:
         action: delay
         mode: all
@@ -39,10 +39,3 @@ spec:
         delay:
           latency: "1s"
         direction: to
-        target:
-          selector:
-            namespaces:
-              - chaos-demo
-            labelSelectors:
-              app: backend
-          mode: all

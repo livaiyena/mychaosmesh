@@ -1,18 +1,17 @@
 apiVersion: chaos-mesh.org/v1alpha1
-kind: NetworkChaos
+kind: StressChaos
 metadata:
-  name: heavy-network-delay
+  name: backend-cpu-stress
   namespace: chaos-demo
 spec:
-  action: delay
   mode: all
   selector:
     namespaces:
       - chaos-demo
     labelSelectors:
       app: backend
-  delay:
-    latency: "5s"
-    jitter: "100ms"
-  direction: to
-  duration: "1m"
+  stressors:
+    cpu:
+      workers: 4
+      load: 100
+  duration: "30s"

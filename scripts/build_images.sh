@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Build script for My Chaos Mesh Project
-# This script builds the docker images inside Minikube's Docker daemon.
+# Build script for Project
+# This script builds the docker images inside Minikubes Docker daemon.
 
 set -e
 

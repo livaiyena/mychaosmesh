@@ -12,9 +12,9 @@ spec:
     labelSelectors:
       app: frontend
   loss:
-    loss: "80"
+    loss: "50"
     correlation: "100"
-  direction: both
+  direction: to
   target:
     selector:
       namespaces:

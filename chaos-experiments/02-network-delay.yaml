@@ -12,7 +12,7 @@ spec:
     labelSelectors:
       app: backend
   delay:
-    latency: "2s"
+    latency: "1s"
     jitter: "100ms"
   direction: to
   duration: "1m"
