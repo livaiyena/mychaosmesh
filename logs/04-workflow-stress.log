@@ -1,0 +1,37 @@
+=== Experiment: 04-workflow-stress ===
+
+=== Test Results during Chaos ===
+Request 1 (T+0s):
+{"backend_response":{"dataservice_response":{"data":[{"id":1,"value":"A"},{"id":2,"value":"B"},{"id":3,"value":"C"}],"message":"Query successful","processing_time":0.18119047188168808},"latency_ms":184.12,"source":"backend"},"latency_ms":186.67,"source":"frontend"}
+
+Status: 200 Time: 0.194285s
+------------------
+workflow.chaos-mesh.org/stress-and-delay-workflow created
+Request 2 (T+2s):
+{"backend_response":{"dataservice_response":{"data":[{"id":1,"value":"A"},{"id":2,"value":"B"},{"id":3,"value":"C"}],"message":"Query successful","processing_time":0.06986898305462608},"latency_ms":72.4,"source":"backend"},"latency_ms":74.97,"source":"frontend"}
+
+Status: 200 Time: 0.081595s
+------------------
+Request 3 (T+4s):
+{"backend_response":{"dataservice_response":{"data":[{"id":1,"value":"A"},{"id":2,"value":"B"},{"id":3,"value":"C"}],"message":"Query successful","processing_time":0.15160243361324427},"latency_ms":154.36,"source":"backend"},"latency_ms":157.25,"source":"frontend"}
+
+Status: 200 Time: 0.164829s
+------------------
+Request 4 (T+7s):
+{"backend_response":{"dataservice_response":{"data":[{"id":1,"value":"A"},{"id":2,"value":"B"},{"id":3,"value":"C"}],"message":"Query successful","processing_time":0.12086623389204408},"latency_ms":123.46,"source":"backend"},"latency_ms":125.92,"source":"frontend"}
+
+Status: 200 Time: 0.132679s
+------------------
+Request 5 (T+9s):
+{"backend_response":{"dataservice_response":{"data":[{"id":1,"value":"A"},{"id":2,"value":"B"},{"id":3,"value":"C"}],"message":"Query successful","processing_time":0.1550030593034573},"latency_ms":157.52,"source":"backend"},"latency_ms":160.05,"source":"frontend"}
+
+Status: 200 Time: 0.166573s
+------------------
+Request 6 (T+11s):
+{"backend_response":{"dataservice_response":{"data":[{"id":1,"value":"A"},{"id":2,"value":"B"},{"id":3,"value":"C"}],"message":"Query successful","processing_time":0.09618476512600757},"latency_ms":98.65,"source":"backend"},"latency_ms":101.12,"source":"frontend"}
+
+Status: 200 Time: 0.107707s
+------------------
+workflow.chaos-mesh.org "stress-and-delay-workflow" deleted from chaos-demo namespace
+
+=== Experiment Completed ===

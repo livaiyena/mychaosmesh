@@ -1,0 +1,25 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: severe-packet-loss
+  namespace: chaos-demo
+spec:
+  action: loss
+  mode: all
+  selector:
+    namespaces:
+      - chaos-demo
+    labelSelectors:
+      app: frontend
+  loss:
+    loss: "80"
+    correlation: "100"
+  direction: both
+  target:
+    selector:
+      namespaces:
+        - chaos-demo
+      labelSelectors:
+        app: backend
+    mode: all
+  duration: "1m"

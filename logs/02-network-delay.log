@@ -1,0 +1,37 @@
+=== Experiment: 02-network-delay ===
+
+=== Test Results during Chaos ===
+Request 1 (T+0s):
+{"backend_response":{"dataservice_response":{"data":[{"id":1,"value":"A"},{"id":2,"value":"B"},{"id":3,"value":"C"}],"message":"Query successful","processing_time":0.1824726271073593},"latency_ms":185.18,"source":"backend"},"latency_ms":188.81,"source":"frontend"}
+
+Status: 200 Time: 0.197060s
+------------------
+networkchaos.chaos-mesh.org/heavy-network-delay created
+Request 2 (T+2s):
+{"error":"HTTPConnectionPool(host='backend-service', port=5001): Read timed out. (read timeout=5)","service":"frontend"}
+
+Status: 503 Time: 7.939103s
+------------------
+Request 3 (T+12s):
+{"error":"HTTPConnectionPool(host='backend-service', port=5001): Read timed out. (read timeout=5)","service":"frontend"}
+
+Status: 503 Time: 7.999503s
+------------------
+Request 4 (T+22s):
+{"error":"HTTPConnectionPool(host='backend-service', port=5001): Read timed out. (read timeout=5)","service":"frontend"}
+
+Status: 503 Time: 8.026656s
+------------------
+Request 5 (T+32s):
+{"error":"HTTPConnectionPool(host='backend-service', port=5001): Read timed out. (read timeout=5)","service":"frontend"}
+
+Status: 503 Time: 7.994449s
+------------------
+Request 6 (T+42s):
+{"error":"HTTPConnectionPool(host='backend-service', port=5001): Read timed out. (read timeout=5)","service":"frontend"}
+
+Status: 503 Time: 8.013882s
+------------------
+networkchaos.chaos-mesh.org "heavy-network-delay" deleted from chaos-demo namespace
+
+=== Experiment Completed ===
