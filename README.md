@@ -135,9 +135,7 @@ mychaosmesh/
 ├── k8s/                          # Kubernetes manifests
 ├── chaos-experiments/            # Chaos Mesh experiments
 ├── scripts/                      # Automation scripts
-├── logs/                         # Experiment outputs
-├── importantexperimentlogs/      # Important log archives
-└── importantexperimentphotos/    # Visual reports
+└── logs/                         # Experiment outputs
 ```
 
 ---
